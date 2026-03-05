@@ -23,6 +23,13 @@ resource "terraform_data" "bootstrap" {
       password = "DevOps321"
       host = aws_instance.mongodb.private_ip
     }
+    provisioner "file" {
+      source = "bootstrap.sh" #local file path
+      destination = "/tmp/bootstrap.sh" #Destination path on the remote machine
+      
+    }
+
+
     provisioner "remote-exec" {
         command = "bootstrap-hosts.sh"  
     }

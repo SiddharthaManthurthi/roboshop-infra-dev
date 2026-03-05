@@ -3,7 +3,6 @@ resource "aws_instance" "mongodb" {
   instance_type = "t3.micro"
   subnet_id = local.database_subnet_id
   vpc_security_group_ids = [local.mongodb_sg_id]
-  #iam_instance_profile = aws_iam_instance_profile.bastion.name
 
   tags = merge(
     {
@@ -14,10 +13,11 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "terraform_data" "bootstrap" {
-    triggers_replace = [
-        aws_instance.mongodb.id
-    ]
-      connection {
+  triggers_replace = [
+    aws_instance.mongodb.id
+  ]
+
+  connection {
     type     = "ssh"
     user     = "ec2-user"
     password = "DevOps321"

@@ -117,7 +117,7 @@ resource "aws_launch_template" "catalogue" {
     )
 }
 
-/* resource "aws_autoscaling_group" "catalogue" {
+resource "aws_autoscaling_group" "catalogue" {
   name                      = "${var.project}-${var.environment}-catalogue"
   max_size                  = 10
   min_size                  = 1
@@ -150,4 +150,4 @@ resource "aws_launch_template" "catalogue" {
     value               = "ipsum"
     propagate_at_launch = false
   }
-} */
+}

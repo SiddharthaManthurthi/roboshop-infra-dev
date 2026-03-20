@@ -28,7 +28,7 @@ resource "aws_lb_listener" "https" {
 
     fixed_response {
       content_type = "text/html"
-      message_body = "<h1>Hi, I am from HTTP Frontend ALB</h1>"
+      message_body = "<h1>I Love You, Ghreeshma ❤️❤️❤️</h1> <p>Yours lovingly, Siddhu 💖</p>"
       status_code  = "200"
     }
   }

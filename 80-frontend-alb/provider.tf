@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "siddharthais.online.dev"
-    key            = "roboshop-dev-backend-alb"
+    key            = "roboshop-dev-frontend-alb"
     region         = "us-east-1"
     encrypt        = true
     use_lockfile    = true  # Enables native S3 locking

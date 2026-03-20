@@ -28,8 +28,7 @@ resource "aws_lb_listener" "https" {
 
     fixed_response {
       content_type = "text/html"
-      message_body = "<div style=\"text-align:center; font-family:Arial, sans-serif;\"><h1 style=\"color:red; font-size:48px; margin-bottom:10px;\">I Love You, Ghreeshma ❤️❤️❤️</h1><p style=\"color:black; font-size:28px; font-weight:bold; margin:10px 0;\">Miss you da Ghreeshma :(</p><p style=\"font-size:20px; margin-top:15px;\">Yours lovingly, Siddhu 💗</p></div>"
-      #"<h1>I Love You, Ghreeshma &#10084;&#10084;&#10084;</h1><p>Yours lovingly, Siddhu &#128151;</p>"
+      message_body = "<div style=\"text-align:center;font-family:Arial;\"><h1 style=\"color:red !important;font-size:42px !important;\">I Love You, Ghreeshma &#10084;&#10084;&#10084;</h1><p style=\"color:black !important;font-size:24px !important;font-weight:bold;\">Miss you da Ghreeshma :(</p><p style=\"font-size:18px !important;\">Yours lovingly, Siddhu &#128151;</p></div>"
       status_code  = "200"
     }
   }

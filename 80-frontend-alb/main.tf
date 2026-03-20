@@ -19,7 +19,9 @@ resource "aws_lb" "frontend_alb" {
 resource "aws_lb_listener" "https" {
   load_balancer_arn = aws_lb.frontend_alb.arn
   port              = "443"
-  protocol          = "HTTP"
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
 
   default_action {
     type = "fixed-response"

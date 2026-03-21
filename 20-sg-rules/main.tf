@@ -301,6 +301,8 @@ resource "aws_security_group_rule" "backend_alb_frontend" {
   security_group_id = local.backend_alb_sg_id
 }
 
+# Frontend ALB
+
 resource "aws_security_group_rule" "frontend_frontend_alb" {
   type              = "ingress"
   from_port         = 80

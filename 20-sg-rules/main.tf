@@ -1,3 +1,5 @@
+# Bastion
+
 resource "aws_security_group_rule" "bastion_internet" {
   type              = "ingress"
   from_port         = 22
@@ -8,6 +10,8 @@ resource "aws_security_group_rule" "bastion_internet" {
   # which SG you are creating this rule
   security_group_id = local.bastion_sg_id
 }
+
+# MongoDB
 
 resource "aws_security_group_rule" "mongodb_bastion" {
   type              = "ingress"

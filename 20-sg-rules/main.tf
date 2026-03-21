@@ -301,7 +301,7 @@ resource "aws_security_group_rule" "backend_alb_frontend" {
   security_group_id = local.backend_alb_sg_id
 }
 
-# Frontend ALB
+# Frontend
 
 resource "aws_security_group_rule" "frontend_frontend_alb" {
   type              = "ingress"
@@ -312,6 +312,8 @@ resource "aws_security_group_rule" "frontend_frontend_alb" {
   source_security_group_id = local.frontend_alb_sg_id
   security_group_id = local.frontend_sg_id
 }
+
+# Frontend ALB
 
 resource "aws_security_group_rule" "frontend_alb_public" {
   type              = "ingress"

@@ -119,7 +119,7 @@ resource "aws_security_group_rule" "rabbitmq_payment" {
   security_group_id = local.rabbitmq_sg_id
 }
 
-
+# Catalogue
 
 resource "aws_security_group_rule" "catalogue_bastion" {
   type              = "ingress"

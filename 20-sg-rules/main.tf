@@ -43,6 +43,8 @@ resource "aws_security_group_rule" "mongodb_user" {
   security_group_id = local.mongodb_sg_id
 }
 
+# Redis
+
 resource "aws_security_group_rule" "redis_bastion" {
   type              = "ingress"
   from_port         = 22
@@ -72,6 +74,9 @@ resource "aws_security_group_rule" "redis_cart" {
   source_security_group_id = local.cart_sg_id
   security_group_id = local.redis_sg_id
 }
+
+# MySQL
+
 resource "aws_security_group_rule" "mysql_bastion" {
   type              = "ingress"
   from_port         = 22

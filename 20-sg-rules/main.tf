@@ -97,6 +97,8 @@ resource "aws_security_group_rule" "mysql_shipping" {
   security_group_id = local.mysql_sg_id
 }
 
+# RabbitMQ
+
 resource "aws_security_group_rule" "rabbitmq_bastion" {
   type              = "ingress"
   from_port         = 22

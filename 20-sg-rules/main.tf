@@ -141,6 +141,8 @@ resource "aws_security_group_rule" "catalogue_backend_alb" {
   security_group_id = local.catalogue_sg_id
 }
 
+# User
+
 resource "aws_security_group_rule" "user_bastion" {
   type              = "ingress"
   from_port         = 22

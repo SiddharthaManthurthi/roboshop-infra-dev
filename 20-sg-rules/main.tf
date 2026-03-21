@@ -163,6 +163,8 @@ resource "aws_security_group_rule" "user_backend_alb" {
   security_group_id = local.user_sg_id
 }
 
+# Cart
+
 resource "aws_security_group_rule" "cart_bastion" {
   type              = "ingress"
   from_port         = 22
@@ -182,6 +184,8 @@ resource "aws_security_group_rule" "cart_backend_alb" {
   source_security_group_id = local.backend_alb_sg_id
   security_group_id = local.cart_sg_id
 }
+
+# Shipping
 
 resource "aws_security_group_rule" "shipping_bastion" {
   type              = "ingress"

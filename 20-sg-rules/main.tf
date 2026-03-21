@@ -207,6 +207,8 @@ resource "aws_security_group_rule" "shipping_backend_alb" {
   security_group_id = local.shipping_sg_id
 }
 
+# Payment
+
 resource "aws_security_group_rule" "payment_bastion" {
   type              = "ingress"
   from_port         = 22
@@ -226,6 +228,8 @@ resource "aws_security_group_rule" "payment_backend_alb" {
   source_security_group_id = local.backend_alb_sg_id
   security_group_id = local.payment_sg_id
 }
+
+# Backend ALB
 
 resource "aws_security_group_rule" "backend_alb_bastion" {
   type              = "ingress"

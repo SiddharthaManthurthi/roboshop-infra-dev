@@ -5,6 +5,7 @@ terraform {
       version = "6.33.0" # Terraform AWS provider version
     }
   }
+  
   backend "s3" {
     bucket         = "siddharthais.online.dev"
     key            = "roboshop-dev-db"

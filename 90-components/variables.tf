@@ -5,7 +5,7 @@ variable "components" {
         catalogue ={
             rule_priority = 10
         }
-        /* user ={
+        user ={
             rule_priority = 20
         }
         cart ={
@@ -16,7 +16,7 @@ variable "components" {
         }
         payment ={
             rule_priority = 50
-        } */
+        }
         
         #this is attching to the frontend ALB, there is only component there
         frontend ={

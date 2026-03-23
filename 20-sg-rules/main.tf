@@ -331,6 +331,6 @@ resource "aws_security_group_rule" "frontend_alb_public" {
   to_port           = 443
   protocol          = "tcp"
   # Where traffic is coming from
-  cidr_blocks =   ["0.0.0.0/0"]
+  cidr_blocks =  ["0.0.0.0/0"]
   security_group_id = local.frontend_alb_sg_id
 }

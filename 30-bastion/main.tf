@@ -12,7 +12,7 @@ resource "aws_instance" "bastion" {
     #EBS Volume tags
     tags = merge(
     {
-        Name = "${var.project}-${var.environment}-bastion"
+      Name = "${var.project}-${var.environment}-bastion"
     },
     local.common_tags
   )

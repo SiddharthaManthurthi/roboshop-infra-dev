@@ -22,5 +22,6 @@ variable "sg_names" {
         # Bastion
         "bastion"
         # Openvpn
+        "openvpn"
     ]
 }

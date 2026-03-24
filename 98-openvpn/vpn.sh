@@ -19,7 +19,7 @@ $SCRIPTS/sacli --user "$USERNAME" --key 'prop_superuser' --value 'true' UserProp
 $SCRIPTS/sacli --key 'vpn.server.port'     --value '1194' ConfigPut
 $SCRIPTS/sacli --key 'vpn.server.protocol' --value 'udp'  ConfigPut
 
-# 4.  DNS configuration: use Access Server host DNS
+# 4. DNS configuration: use Access Server host DNS
 $SCRIPTS/sacli --key 'vpn.client.dns.server_auto' --value 'true' ConfigPut
 $SCRIPTS/sacli --key 'cs.prof.defaults.dns.0' --value '8.8.8.8' ConfigPut
 $SCRIPTS/sacli --key 'cs.prof.defaults.dns.1' --value '1.1.1.1' ConfigPut
